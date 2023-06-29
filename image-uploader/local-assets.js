@@ -9,7 +9,10 @@ cloudinary.config({
 
 const images = [
   './image-uploader/images/axes-crafting.gif',
-  './image-uploader/images/wood-stairs-crafting.gif'
+  './image-uploader/images/wood-stairs-crafting.gif',
+  './image-uploader/images/tnt-crafting.png',
+  './image-uploader/images/hay-bale-crafting.png',
+  './image-uploader/images/carpet-crafting.gif'
 ];
 
 (async function run() {
