@@ -8,7 +8,7 @@ const User = require('./models/user.js');
 const CraftingRecipe = require('./models/craftingRecipe.js');
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 8080;
 
 // Create the Handlebars.js engine object with custom helper functions
 const hbs = exphbs.create({ helpers });
