@@ -1,13 +1,13 @@
 const path = require('path');
 const express = require('express');
 const exphbs = require('express-handlebars');
-const routes = require('./controllers');
+const routes = require('./controllers/index.js');
 const helpers = require('./utils/helpers');
 const sequelize = require('./config/connection');
 const itemImageMap = require('./image-uploader/itemImageMap.js');
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 8080;
 
 
 // Create the Handlebars.js engine object with custom helper functions
