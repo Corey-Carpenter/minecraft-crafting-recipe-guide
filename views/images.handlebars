@@ -9,11 +9,29 @@
   {{#each images}}
     <img src="https://res.cloudinary.com/ddnwvsd9o/image/upload/v1687837128/gc64wfdwvlbzjdgjzib6.gif" alt="Image">
   {{/each}}
-  <form class = "commentForm">
-  <label for="commentText">Comment:</label><br>
-  <input type="text" name="commentText" placeholder="Enter comment here!"><br>
-  <input type="submit" value="Submit">
-  </form>
+    <section class='add-comment-container'>
+      <h3>
+          Leave a comment!
+      </h3>
+      <form class='new-comment-form'>
+          <label for='new_comment'>
+            Comment:
+          </label>
+          <br>
+          <textarea id='new_comment' name='new_comment' rows='2' cols='30' placeholder="Enter comment here!"></textarea>
+          <br>
+          <button type='submit'>
+            Submit
+          </button>
+      </form>
+    </section>
+    <aside class="displayComments">
+      <h2>{{Comment.text}}</h2>
+      <a href="/comments/:id"></a><button>
+      View Comment Details
+      </button>
+      </a>
+    </aside>
   <h1>Image #2</h1>
   {{#each images}}
     <img src="https://res.cloudinary.com/ddnwvsd9o/image/upload/v1687837129/c2qsmcikvd4aojzjy6bi.gif" alt="Image2">
