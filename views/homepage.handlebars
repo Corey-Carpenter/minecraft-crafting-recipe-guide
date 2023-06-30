@@ -1,10 +1,19 @@
-<!-- images.hbs -->
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Images</title>
+  <title>Homepage</title>
 </head>
 <body>
-  <h1>Images</h1>
+  <h1>Homepage</h1>
+  <form action="/search" method="POST">
+    <select name="item">
+      <option value="axe">Axe</option>
+      <option value="tnt">TNT</option>
+      <option value="carpet">Carpet</option>
+      <option value="stairs">Stairs</option>
+      <option value="hay_bale">Hay Bale</option>
+    </select>
+    <button type="submit">Search</button>
+  </form>
 </body>
 </html>

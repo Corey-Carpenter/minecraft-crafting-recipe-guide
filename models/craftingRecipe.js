@@ -11,7 +11,7 @@ CraftingRecipe.init({
         primaryKey: true,
         autoIncrement: true,
     },
-    name: {
+    keyword: {
         type: DataTypes.STRING,
         allowNull: false,
     },

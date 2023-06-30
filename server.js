@@ -4,11 +4,11 @@ const exphbs = require('express-handlebars');
 const routes = require('./controllers/index.js');
 const helpers = require('./utils/helpers');
 const sequelize = require('./config/connection');
-const User = require('./models/user.js');
-const CraftingRecipe = require('./models/craftingRecipe.js');
+const itemImageMap = require('./image-uploader/itemImageMap.js');
 
 const app = express();
 const PORT = process.env.PORT || 8080;
+
 
 // Create the Handlebars.js engine object with custom helper functions
 const hbs = exphbs.create({ helpers });
@@ -20,6 +20,14 @@ app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Display the image of the item that the user chooses
+app.post('/search', (req,res) => {
+  const selectedItem = req.body.item;
+  const imageURL = itemImageMap[selectedItem];
+
+  res.render('searchResults', { imageURL });
+});
 
 app.use(routes);
 
