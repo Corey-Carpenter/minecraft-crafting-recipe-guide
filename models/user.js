@@ -16,6 +16,10 @@ User.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
+        keyword: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
     },
     {
         sequelize,
