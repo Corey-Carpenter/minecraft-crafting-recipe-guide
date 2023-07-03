@@ -4,19 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main. Switch Later</title>
-    <link rel="stylesheet" href="./css/jass.css">
+    <title>Minecraft Crafting Recipe Guide</title>
+    <link rel="stylesheet" href="../../css/bulma.css">
 </head>
 
 <body>
-    <header class="display-flex justify-space-between align-center p-2">
-        <h1>
-            Minecraft Crafting Recipe Guide
-        </h1>
-    </header>
-    <main class="container container-fluid mt-5">
-        <!-- Render the contents of the sub layout here -->
-        {{{ body }}}
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item">
+            <img src="../../images/minecraft-logo.jpg">
+            </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <h1 class="navbar-item">
+                <strong>Crafting Recipe Guide</strong>
+                </h1>
+                <a href="/" class="navbar-item">
+                Home
+                </a>
+                <a href="/api/comments" class="navbar-item">
+                Comments
+                </a>
+            </div>
+        </div>
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a class="button is-primary">
+                    <strong>Sign up</strong>
+                    </a>
+                    <a class="button is-light">
+                    Log in
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+    <!-- Render the contents of the sub layout here -->
+    {{{ body }}}
     </main>
     <footer>
 

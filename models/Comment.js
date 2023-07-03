@@ -14,6 +14,12 @@ Comment.init({
     text: {
         type: DataTypes.STRING,
         allowNull: false,
+        validate: {
+            len: { 
+               args: [1],
+               msg: "Comment cannot be blank."
+            }
+         }
     }
 },
 {
@@ -29,3 +35,26 @@ Comment.init({
 
 //exported to index.js and commentRoutes.js
 module.exports = Comment;
+
+/*
+user_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        references: {
+            model: 'user',
+            key: 'id'
+        }
+    },
+
+image_id: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        
+        references: {
+            // this did the trick!
+            onDelete: 'set null',
+            model: 'craftingRecipe',
+            key: 'id'
+        }
+    }
+*/
