@@ -22,7 +22,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Display the image of the item that the user chooses
-app.post('/search', (req,res) => {
+app.post('api/crafting-recipes/search', (req,res) => {
   const selectedItem = req.body.item;
   const imageURL = itemImageMap[selectedItem];
 
@@ -32,5 +32,5 @@ app.post('/search', (req,res) => {
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
+  app.listen(PORT, () => console.log('Now listening at http://localhost:8080/'));
 });

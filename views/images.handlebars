@@ -1,10 +1,36 @@
 <!-- views/images.handlebars -->
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Images</title>
-</head>
-<body>
+<div class="card">
+        <div class="card-image">
+          <figure class="image img">
+            <img src="https://res.cloudinary.com/ddnwvsd9o/image/upload/v1687837128/gc64wfdwvlbzjdgjzib6.gif"  alt="Crafting Recipe image">
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content">
+              <p class="title is-4">RECIPE TITLE</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <article class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              <strong>FIRSTNAME LASTNAME</strong>
+              <br>
+              This is a comment written by firstname lastname.
+              <br>
+              <small>time</small>
+            </p>
+          </div>
+        </div>
+</div>
+<!-- This is the form for adding a new comment -->
+<script src='/js/add-comment.js'></script>
+
+<!--
+<div>
   <h1>Image #1</h1>
   {{#each images}}
     <img src="https://res.cloudinary.com/ddnwvsd9o/image/upload/v1687837128/gc64wfdwvlbzjdgjzib6.gif" alt="Image">
@@ -40,8 +66,65 @@
   {{#each images}} 
   <img src="https://res.cloudinary.com/ddnwvsd9o/image/upload/v1687995895/qcsyg0bbpiaaclxytcrl.png" alt="Image3">
   {{/each}}
-</body>
-</html>
+</div>
 
-<!-- This is the form for adding a new comment -->
-<script src='/js/add-comment.js'></script>
+
+<div class="card">
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <img src={{craftingRecipe.imageUrl}}  alt="Crafting Recipe image">
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content">
+              <p class="title is-4">{{craftingRecipe.keyword}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <article class="media">
+        <div class="media-content">
+          {{#each allComments as |comment|}}
+          <div class="content">
+            <p>
+              <strong>{{User.first_name}}  {{User.last_name}}</strong>
+              <br>
+              {{comment.text}}
+              <br>
+              <small>{{comment.createdAt}}</small>
+            </p>
+          </div>
+          {{/each}}
+        </div>
+</div>
+
+
+<div class="card">
+        <div class="card-image">
+          <figure class="image img">
+            <img src="https://res.cloudinary.com/ddnwvsd9o/image/upload/v1687837128/gc64wfdwvlbzjdgjzib6.gif"  alt="Crafting Recipe image">
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content">
+              <p class="title is-4">RECIPE TITLE</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <article class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              <strong>FIRSTNAME LASTNAME</strong>
+              <br>
+              This is a comment written by firstname lastname.
+              <br>
+              <small>time</small>
+            </p>
+          </div>
+        </div>
+</div>
+-->
