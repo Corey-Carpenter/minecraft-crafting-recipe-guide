@@ -1,19 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Homepage</title>
-</head>
-<body>
-  <h1>Homepage</h1>
-  <form action="/search" method="POST">
-    <select name="item">
-      <option value="axe">Axe</option>
-      <option value="tnt">TNT</option>
-      <option value="carpet">Carpet</option>
-      <option value="stairs">Stairs</option>
-      <option value="hay_bale">Hay Bale</option>
-    </select>
-    <button type="submit">Search</button>
-  </form>
-</body>
-</html>
+<div class = "search-container .is-horizontal-center">
+  <h1 class="navbar-item">
+      <strong>Homepage</strong>
+  </h1>
+    <div class="field is-grouped search-element">
+      <form class="control is-expanded" action="/api/crafting-recipes/search" method="POST">
+        <select class="input" name="item">
+          <option value="axe">Axe</option>
+          <option value="tnt">TNT</option>
+          <option value="carpet">Carpet</option>
+          <option value="stairs">Stairs</option>
+          <option value="hay_bale">Hay Bale</option>
+        </select>
+        <button type="submit">Search</button>
+      </form>
+    </div>
+</div>

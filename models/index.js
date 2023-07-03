@@ -8,13 +8,13 @@ User.hasMany(CraftingRecipe, {
     foreignKey: 'user_id',
 });
 
-//User has many comments
-User.hasMany(Comment, {
+//The Crafting Recipes belongs to the User
+CraftingRecipe.belongsTo(User, {
     foreignKey: 'user_id',
 });
 
-//The Crafting Recipes belongs to the User
-CraftingRecipe.belongsTo(User, {
+//User has many comments
+User.hasMany(Comment, {
     foreignKey: 'user_id',
 });
 
@@ -22,5 +22,20 @@ CraftingRecipe.belongsTo(User, {
 Comment.belongsTo(User, {
     foreignKey: 'user_id',
 });
+
+//Crafting recipe images have many comments
+CraftingRecipe.hasMany(Comment, {
+    foreignKey: 'image_id',
+    allowNull: true,
+    onDelete: 'cascade'
+});
+
+//Comments belong to one crafting recipe image
+Comment.belongsTo(CraftingRecipe, {
+    foreignKey: 'image_id',
+    allowNull: true, 
+    onDelete: 'cascade'
+});
+
 
 module.exports = { User, CraftingRecipe, Comment };
