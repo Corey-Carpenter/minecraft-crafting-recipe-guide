@@ -32,7 +32,7 @@ CraftingRecipe.init({
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'craftingRecipe',
+    modelName: 'craftingrecipe',
 }
 );
 
