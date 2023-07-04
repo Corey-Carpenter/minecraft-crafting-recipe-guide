@@ -18,13 +18,6 @@ CraftingRecipe.init({
     imageUrl: {
         type:DataTypes.STRING,
         allowNull: false,
-    },
-    user_id: {
-        type: DataTypes.INTEGER,
-        references: {
-            model: 'user',
-            key: 'id'
-        }
     }
 },
 {
@@ -37,3 +30,13 @@ CraftingRecipe.init({
 );
 
 module.exports = CraftingRecipe;
+
+/*
+user_id: {
+        type: DataTypes.INTEGER,
+        references: {
+            model: 'user',
+            key: 'id'
+        }
+    }
+*/
