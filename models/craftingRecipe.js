@@ -11,22 +11,32 @@ CraftingRecipe.init({
         primaryKey: true,
         autoIncrement: true,
     },
-    name: {
+    keyword: {
         type: DataTypes.STRING,
         allowNull: false,
     },
     imageUrl: {
         type:DataTypes.STRING,
         allowNull: false,
-    },
+    }
 },
 {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'craftingRecipe',
+    modelName: 'craftingrecipe',
 }
 );
 
 module.exports = CraftingRecipe;
+
+/*
+user_id: {
+        type: DataTypes.INTEGER,
+        references: {
+            model: 'user',
+            key: 'id'
+        }
+    }
+*/
