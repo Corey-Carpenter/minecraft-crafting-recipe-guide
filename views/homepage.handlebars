@@ -7,11 +7,14 @@
   <h1>Homepage</h1>
   <form action="/search" method="POST">
     <select name="item">
-      <option value="axe">Axe</option>
-      <option value="tnt">TNT</option>
-      <option value="carpet">Carpet</option>
-      <option value="stairs">Stairs</option>
-      <option value="hay_bale">Hay Bale</option>
+      <optgroup label="Basic">
+        <option value="axe">Axe</option>
+        <option value="tnt">TNT</option>
+        <option value="carpet">Carpet</option>
+        <option value="wood_stairs">Stairs</option>
+        <option value="hay_bale">Hay Bale</option>
+        <option value="stick">Stick</option>
+      </optgroup>
     </select>
     <button type="submit">Search</button>
   </form>
