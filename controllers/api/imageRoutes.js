@@ -1,8 +1,27 @@
 const express = require('express');
 const router = express.Router();
 const cloudinary = require('cloudinary').v2;
+const CraftingRecipe = require('../../models/craftingRecipe');
 
-// GET route to retrieve images from Cloudinary
+router.get('/', async (req, res) => {
+  res.render('images'); // Pass the retrieved images to the Handlebars template
+});
+
+router.get('/:id', async(req, res) => {
+  // findOne method
+  const recipeData = await CraftingRecipe.findOne({
+      where: {
+          id: req.params.id
+      },
+      attributes: ['id', 'keyword', 'imageUrl']
+  })
+  const individualRecipe = recipeData.get({ plain: true });
+  res.render('images', { individualRecipe });
+});
+
+module.exports = router;
+
+/*
 router.get('/', async (req, res) => {
   try {
     cloudinary.config({
@@ -19,4 +38,8 @@ router.get('/', async (req, res) => {
   }
 });
 
-module.exports = router;
+// GET route to retrieve images from Cloudinary
+router.get('/', async (req, res) => {
+    res.render('images'); // Pass the retrieved images to the Handlebars template
+});
+*/
