@@ -13,16 +13,19 @@ async function newFormHandler(event) {
       },
     });
     //if the comment is added, the 'images' template will be rerendered
-    if (new_comment === "" || null) {
-        alert("Comment can't be blank");
-    }
     if (response.ok) {
       alert("Comment successfully created");
       document.location.replace('/images');
     } else {
       alert('Failed to add comment');
     }
-  }
+  };
   
   document.querySelector('.new-comment-form').addEventListener('submit', newFormHandler);
+
+  /*
+  if (new_comment === "" || null) {
+        alert("Comment can't be blank");
+    }
+  */
     

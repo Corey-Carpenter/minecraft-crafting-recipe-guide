@@ -1,0 +1,15 @@
+<article class="media">
+        <div class="media-content">
+          {{#each allComments as |comment|}}
+          <div class="content">
+            <p>
+              <strong>{{User.first_name}}  {{User.last_name}}</strong>
+              <br>
+              {{comment.text}}
+              <br>
+              <small>ID: {{comment.id}} {{comment.createdAt}}</small>
+            </p>
+          </div>
+          {{/each}}
+        </div>
+</article>

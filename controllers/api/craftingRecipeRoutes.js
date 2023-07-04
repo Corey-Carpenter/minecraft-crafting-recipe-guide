@@ -1,10 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const CraftingRecipe = require('../models/craftingRecipe');
+const CraftingRecipe = require('../../models/craftingRecipe');
+
 
 // GET route to display the drop down menu of the items
 router.get('/search', (req, res) => {
-  res.render('searchForm');
+  res.render('homepage');
 });
 
 // POST route to handle the search request
@@ -18,7 +19,11 @@ router.post('/search', async (req, res) => {
       },
     });
 
-    res.render('searchResults', { recipe });
+    res.render('searchResults', { 
+      recipe: recipe,
+      comments: allComments, 
+    });
+
   } catch (error) {
     console.error('Error searching for recipe:', error);
     res.status(500).json({ error: 'Failed to search for recipe' });
