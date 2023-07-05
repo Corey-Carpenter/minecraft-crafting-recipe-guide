@@ -2,7 +2,7 @@
 //This will contain all of the imageURL from cloudinary
 const itemImageMap = {
 
-    //Basic 
+    //Basic (ids: 1-6)
     stick: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422474/Basic/stick-crafting_painj4.png",
     torch: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688420999/Basic/ss438djpm8hohwohnnby.png",
     furnace: 'https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688420998/Basic/ninf5dp0custdbnj7exb.png',
@@ -10,7 +10,7 @@ const itemImageMap = {
     chest: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688420997/Basic/ghqh4tjxbtj6d6fhntgo.png",
     wood_planks: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688420997/Basic/eivkqx8q6styzclqz44i.gif",
 
-    //Tool
+    //Tool (7-18)
     axe: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1687837128/gc64wfdwvlbzjdgjzib6.gif",
     pickaxe: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688421005/Tools/vqyjnyhqm68xcurqomkn.gif",
     fishing_rod: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688421164/Tools/mbzwlyekiopxofu3w2kh.png",
@@ -24,8 +24,8 @@ const itemImageMap = {
     clock: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688421001/Tools/ljntcgncnpakotete9qi.png",
     carrot_stick: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688421000/Tools/kre8hnrkb9eo2rdtxovt.png", 
 
-    //Weapon
-    leggins: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422238/Weapons%20%2B%20Armor/nwr2otvj6h41ck4qdson.gif",
+    //Weapon (19-30)
+    leggings: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422238/Weapons%20%2B%20Armor/nwr2otvj6h41ck4qdson.gif",
     helmet: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422237/Weapons%20%2B%20Armor/zjl139kg3twdcpicu4m6.gif",
     chest_plate: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422236/Weapons%20%2B%20Armor/hmpeykbpmiwyskxfccek.gif",
     boots: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422235/Weapons%20%2B%20Armor/j1oeykl5ylvnavmbhngo.gif",
@@ -38,7 +38,7 @@ const itemImageMap = {
     arrow: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688421008/Weapons%20%2B%20Armor/qppn0khp7jdpyxrhyfrz.png",
     bow: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688421007/Weapons%20%2B%20Armor/zwqyb08irtowucbh7488.png",
     
-    //Manufactured 
+    //Manufactured (31-78)
     polished_andesite: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422475/Manufactured/polished-andesite-crafting_a9ms4o.png",
     nether_brick: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422475/Manufactured/nether-brick-crafting_tyj4ok.png",
     pillar_quartz: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422475/Manufactured/pillar-quartz-block-crafting_tgx1gr.png",
@@ -88,7 +88,7 @@ const itemImageMap = {
     anvil: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422239/Manufactured/y6jq9vtdjmvtujk6jwkb.png",
     andesite: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422238/Manufactured/cxq20fd7iwe1l76twzmd.png",
 
-    //Transportration
+    //Transportration (79-87)
     activator_rail: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422816/Transportation/activator-rail-crafting_mtkbbu.png",
     rail: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422816/Transportation/activator-rail-crafting_mtkbbu.png",
     powered_minecart: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422814/Transportation/powered-minecart-crafting_b7xbh1.png",
@@ -100,7 +100,7 @@ const itemImageMap = {
     boat: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422808/Transportation/boat-crafting_xqnwvh.png",
 
 
-    //Food
+    //Food (88-101)
     rabbit_stew: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422815/Food/rabbit-stew-crafting_f3lj3k.png",
     pumpkin_seeds: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422815/Food/pumpkin-seeds-crafting_rvyz2r.png",
     pumpkin_pie: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422814/Food/pumpkin-pie-crafting_wlewbg.png",
@@ -117,7 +117,7 @@ const itemImageMap = {
     beetroot_soup: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422808/Food/beetroot-soup-crafting_aoqhnn.png",
 
 
-    //Mechanism
+    //Mechanism (102-120)
     weighted_pressure_plate: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422816/Mechanism/weighted-pressure-plates-crafting_zbh8xe.gif",
     trapdoor: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422816/Mechanism/trapdoor-crafting_jrlime.png",
     tripwire: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422816/Mechanism/tripwire-hook-crafting_qcwkmr.png",
@@ -138,7 +138,7 @@ const itemImageMap = {
     dispenser: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422809/Mechanism/dispenser-crafting_zamzkd.png",
     daylight_sensor: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422809/Mechanism/daylight-sensor-crafting_qsdiqa.png",
 
-    //Enchantment & Brewing
+    //Enchantment & Brewing (121-128)
     magma_cream: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422813/Enchantment/magma-cream-crafting_t8edku.png",
     gold_nugget: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422811/Enchantment/gold-nugget-crafting_blyjfd.png",
     golden_watermelon: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422811/Enchantment/glistering-melon-crafting_vvibpr.png",
@@ -149,7 +149,7 @@ const itemImageMap = {
     blaze_powder: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422808/Enchantment/blaze-powder-crafting_wn1zzx.png",
 
 
-    //Wool
+    //Wool (129-143)
     yellow_wool: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422816/Wool/yellow-wool-crafting_wojzb6.png",
     wool: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422816/Wool/wool-crafting_rplw9z.png",
     red_wool: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422815/Wool/red-wool-crafting_eppmoc.png",
@@ -158,7 +158,7 @@ const itemImageMap = {
     orange_wool: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422814/Wool/orange-wool-crafting_lemhkl.png",
     magenta_wool: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422813/Wool/magenta-wool-crafting_bzsol1.png",
     lime_wool: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422813/Wool/lime-wool-crafting_bulssw.png",
-    ligh_gray_wool: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422812/Wool/light-gray-wool-crafting_ygs2ei.png",
+    light_gray_wool: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422812/Wool/light-gray-wool-crafting_ygs2ei.png",
     light_blue_wool: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422812/Wool/light-blue-wool-crafting_sosdo7.png",
     green_wool: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422811/Wool/green-wool-crafting_edovpw.png",
     gray_wool: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422811/Wool/gray-wool-crafting_cxpehm.png",
@@ -166,12 +166,12 @@ const itemImageMap = {
     brown_wool: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422808/Wool/brown-wool-crafting_lmcufu.png",
     blue_wool: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422808/Wool/blue-wool-crafting_p89u6b.png",
 
-    //Dye
+    //Dye (144-154)
     red: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422815/Dye/rose-red-dye-crafting_c3nmux.png",
     purple: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422815/Dye/purple-dye-crafting_lv1c6k.png",
     pink: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422814/Dye/pink-dye-crafting_jbyp73.png",
     orange: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422814/Dye/orange-dye-crafting_w2nlii.png",
-    magneta: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422813/Dye/magenta-dye-crafting_voh735.png",
+    magenta: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422813/Dye/magenta-dye-crafting_voh735.png",
     light_gray: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422812/Dye/light-gray-dye-crafting_cc7wps.png",
     lime: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422812/Dye/lime-dye-crafting_pjdrth.png",
     light_blue: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422812/Dye/light-blue-dye-crafting_vnnib6.png",
@@ -179,7 +179,7 @@ const itemImageMap = {
     yellow: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422809/Dye/dandelion-yellow-dye-crafting_zekspj.png",
     cyan: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422809/Dye/cyan-dye-crafting_sgydld.png",
 
-    //Misc
+    //Misc (155-175)
     carpet:"https://res.cloudinary.com/ddnwvsd9o/image/upload/v1687996082/q8upvzejqvuzkqtxhvlk.gif",
     banner: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422816/Misc/banner-crafting_w5fjmy.gif",
     bed: "https://res.cloudinary.com/ddnwvsd9o/image/upload/v1688422816/Misc/bed-crafting_ubge02.png",

@@ -3,10 +3,6 @@ const router = express.Router();
 const cloudinary = require('cloudinary').v2;
 const CraftingRecipe = require('../../models/craftingRecipe');
 
-router.get('/', async (req, res) => {
-  res.render('images'); // Pass the retrieved images to the Handlebars template
-});
-
 router.get('/:id', async(req, res) => {
   // findOne method
   const recipeData = await CraftingRecipe.findOne({
@@ -36,10 +32,5 @@ router.get('/', async (req, res) => {
     console.error('Error retrieving images:', error);
     res.status(500).json({ error: 'Failed to retrieve images' });
   }
-});
-
-// GET route to retrieve images from Cloudinary
-router.get('/', async (req, res) => {
-    res.render('images'); // Pass the retrieved images to the Handlebars template
 });
 */
