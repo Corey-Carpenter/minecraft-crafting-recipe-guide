@@ -1,11 +1,7 @@
 async function deleteHandler(event) {
     const deleteButton = event.target;
     const commentId = deleteButton.parentElement.getAttribute('data-comment-id');
-    //const commentId = comment.getAttribute("data-comment-id");
     event.stopPropagation();
-    //const comment = document.querySelector(".comment-id");
-    //const commentId = comment.getAttribute("data-comment-id");
-    console.log(commentId);
     // Send fetch request to delete comment
     const response = await fetch(`/api/comments/${commentId}`, {
       method: 'DELETE',
@@ -20,7 +16,6 @@ async function deleteHandler(event) {
       alert('Failed to delete comment');
     }
 };
-
 
 var deleteElements = document.querySelectorAll('.button');
 
