@@ -27,14 +27,4 @@ async function newFormHandler(event) {
 const form = document.querySelector('#new-comment-form')
 
 form.addEventListener('submit', newFormHandler);
-
-  /*
-  if (new_comment === "" || null) {
-        alert("Comment can't be blank");
-    }
-
-  
-
-    
-  */
     

@@ -10,6 +10,7 @@ Comment.init({
         allowNull: false,
         primaryKey: true,
         autoIncrement: true,
+        onDelete: 'CASCADE'
     },
     text: {
         type: DataTypes.STRING,
