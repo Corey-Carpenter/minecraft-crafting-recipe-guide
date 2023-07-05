@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minecraft Crafting Recipe Guide</title>
     <link rel="stylesheet" href="../../css/bulma.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 
 <body>
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <a class="navbar-item">
+            <div class="navbar-item">
             <img src="../../images/minecraft-logo.jpg">
-            </a>
+            </div>
         </div>
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
@@ -34,7 +35,7 @@
                     <a class="button is-primary">
                     <strong>Sign up</strong>
                     </a>
-                    <a href="/login">Log In</a>
+                    <a class="button is-light" href="/login">Log In</a>
                 </div>
             </div>
         </div>
@@ -43,8 +44,13 @@
     <!-- Render the contents of the sub layout here -->
     {{{ body }}}
     </main>
-    <footer>
-
+    <footer class="footer">
+        <div class="content has-text-centered">
+         <p>
+        <strong>Recipe Guide</strong> by <a href="https://github.com/Corey-Carpenter/minecraft-crafting-recipe-guide">Corey Carpenter, Justin Sanchez, Sylvestre Corneille, and Michael O'Sullivan</a>.
+        <a href="http://opensource.org/licenses/mit-license.php">MIT Licensed</a>.
+        </p>
+        </div>
     </footer>
 </body>
 

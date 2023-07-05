@@ -1,19 +1,347 @@
-
-<div class = "search-container .is-horizontal-center">
-  <h1 class="navbar-item">
-      <strong>Homepage</strong>
-  </h1>
-    <div class="field is-grouped search-element">
-      <form class="control is-expanded" action="/api/crafting-recipes/search" method="POST">
-        <select class="input" name="item">
-          <option value="axe">Axe</option>
-          <option value="tnt">TNT</option>
-          <option value="carpet">Carpet</option>
-          <option value="stairs">Stairs</option>
-          <option value="hay_bale">Hay Bale</option>
-        </select>
-        <button type="submit">Search</button>
-      </form>
+<div class="card">
+  <div class="card-content">
+    <div class="media">
+      <div class="media-content">
+        <p class="title is-3">Welcome!</p>
+        <p>Please select an item from the categories below. Click an item from the dropdown menu to see its recipe!</p>
+      </div>
     </div>
+  </div>
 </div>
 
+<div class="card">
+  <div class="card-content">
+    <div class="media">
+
+<section class="card-content">
+<div class="dropdown">
+  <div class="dropdown-trigger">
+    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+      <span>Basic</span>
+      <span class="icon is-small">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </button>
+  </div>
+  <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+    <div class="dropdown-content">
+      {{#each allRecipes as |recipe|}}
+      {{#ifCond recipe.id '>' 0}}
+      {{#ifCond recipe.id '<' 7}}
+      <a href="/api/images/{{recipe.id}}" class="dropdown-item">
+        {{recipe.keyword}}
+      </a>
+      {{/ifCond}}
+      {{/ifCond}}
+      {{/each}}
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="card-content">
+<div class="dropdown">
+  <div class="dropdown-trigger">
+    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+      <span>Tool</span>
+      <span class="icon is-small">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </button>
+  </div>
+  <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+    <div class="dropdown-content">
+      {{#each allRecipes as |recipe|}}
+      {{#ifCond recipe.id '>' 6}}
+      {{#ifCond recipe.id '<' 19}}
+      <a href="/api/images/{{recipe.id}}" class="dropdown-item">
+        {{recipe.keyword}}
+      </a>
+      {{/ifCond}}
+      {{/ifCond}}
+      {{/each}}
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="card-content">
+<div class="dropdown">
+  <div class="dropdown-trigger">
+    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+      <span>Weapon</span>
+      <span class="icon is-small">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </button>
+  </div>
+  <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+    <div class="dropdown-content">
+      {{#each allRecipes as |recipe|}}
+      {{#ifCond recipe.id '>' 18}}
+      {{#ifCond recipe.id '<' 31}}
+      <a href="/api/images/{{recipe.id}}" class="dropdown-item">
+        {{recipe.keyword}}
+      </a>
+      {{/ifCond}}
+      {{/ifCond}}
+      {{/each}}
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="card-content">
+<div class="dropdown">
+  <div class="dropdown-trigger">
+    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+      <span>Manufactured</span>
+      <span class="icon is-small">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </button>
+  </div>
+  <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+    <div class="dropdown-content">
+      {{#each allRecipes as |recipe|}}
+      {{#ifCond recipe.id '>' 30}}
+      {{#ifCond recipe.id '<' 79}}
+      <a href="/api/images/{{recipe.id}}" class="dropdown-item">
+        {{recipe.keyword}}
+      </a>
+      {{/ifCond}}
+      {{/ifCond}}
+      {{/each}}
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="card-content">
+<div class="dropdown">
+  <div class="dropdown-trigger">
+    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+      <span>Transportation</span>
+      <span class="icon is-small">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </button>
+  </div>
+  <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+    <div class="dropdown-content">
+      {{#each allRecipes as |recipe|}}
+      {{#ifCond recipe.id '>' 78}}
+      {{#ifCond recipe.id '<' 88}}
+      <a href="/api/images/{{recipe.id}}" class="dropdown-item">
+        {{recipe.keyword}}
+      </a>
+      {{/ifCond}}
+      {{/ifCond}}
+      {{/each}}
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="card-content">
+<div class="dropdown">
+  <div class="dropdown-trigger">
+    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+      <span>Food</span>
+      <span class="icon is-small">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </button>
+  </div>
+  <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+    <div class="dropdown-content">
+      {{#each allRecipes as |recipe|}}
+      {{#ifCond recipe.id '>' 87}}
+      {{#ifCond recipe.id '<' 102}}
+      <a href="/api/images/{{recipe.id}}" class="dropdown-item">
+        {{recipe.keyword}}
+      </a>
+      {{/ifCond}}
+      {{/ifCond}}
+      {{/each}}
+    </div>
+  </div>
+</div>
+</section>
+
+  </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-content">
+    <div class="media">
+
+<section class="card-content">
+<div class="dropdown">
+  <div class="dropdown-trigger">
+    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+      <span>Mechanism</span>
+      <span class="icon is-small">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </button>
+  </div>
+  <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+    <div class="dropdown-content">
+      {{#each allRecipes as |recipe|}}
+      {{#ifCond recipe.id '>' 101}}
+      {{#ifCond recipe.id '<' 121}}
+      <a href="/api/images/{{recipe.id}}" class="dropdown-item">
+        {{recipe.keyword}}
+      </a>
+      {{/ifCond}}
+      {{/ifCond}}
+      {{/each}}
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="card-content">
+<div class="dropdown">
+  <div class="dropdown-trigger">
+    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+      <span>Enchantment and Brewing</span>
+      <span class="icon is-small">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </button>
+  </div>
+  <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+    <div class="dropdown-content">
+      {{#each allRecipes as |recipe|}}
+      {{#ifCond recipe.id '>' 120}}
+      {{#ifCond recipe.id '<' 129}}
+      <a href="/api/images/{{recipe.id}}" class="dropdown-item">
+        {{recipe.keyword}}
+      </a>
+      {{/ifCond}}
+      {{/ifCond}}
+      {{/each}}
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="card-content">
+<div class="dropdown">
+  <div class="dropdown-trigger">
+    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+      <span>Wool</span>
+      <span class="icon is-small">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </button>
+  </div>
+  <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+    <div class="dropdown-content">
+      {{#each allRecipes as |recipe|}}
+      {{#ifCond recipe.id '>' 128}}
+      {{#ifCond recipe.id '<' 144}}
+      <a href="/api/images/{{recipe.id}}" class="dropdown-item">
+        {{recipe.keyword}}
+      </a>
+      {{/ifCond}}
+      {{/ifCond}}
+      {{/each}}
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="card-content">
+<div class="dropdown">
+  <div class="dropdown-trigger">
+    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+      <span>Dye</span>
+      <span class="icon is-small">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </button>
+  </div>
+  <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+    <div class="dropdown-content">
+      {{#each allRecipes as |recipe|}}
+      {{#ifCond recipe.id '>' 143}}
+      {{#ifCond recipe.id '<' 155}}
+      <a href="/api/images/{{recipe.id}}" class="dropdown-item">
+        {{recipe.keyword}}
+      </a>
+      {{/ifCond}}
+      {{/ifCond}}
+      {{/each}}
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="card-content">
+<div class="dropdown">
+  <div class="dropdown-trigger">
+    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+      <span>Misc</span>
+      <span class="icon is-small">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </button>
+  </div>
+  <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+    <div class="dropdown-content">
+      {{#each allRecipes as |recipe|}}
+      {{#ifCond recipe.id '>' 154}}
+      {{#ifCond recipe.id '<' 176}}
+      <a href="/api/images/{{recipe.id}}" class="dropdown-item">
+        {{recipe.keyword}}
+      </a>
+      {{/ifCond}}
+      {{/ifCond}}
+      {{/each}}
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="card-content">
+<div class="dropdown">
+  <div class="dropdown-trigger">
+    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+      <span>All</span>
+      <span class="icon is-small">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </button>
+  </div>
+  <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+    <div class="dropdown-content">
+      {{#each allRecipes as |recipe|}}
+      <a href="/api/images/{{recipe.id}}" class="dropdown-item">
+        {{recipe.keyword}}
+      </a>
+      {{/each}}
+    </div>
+  </div>
+</div>
+</section>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  var dropdownElements = document.querySelectorAll('.dropdown');
+
+  function eventHandler(element) {
+      element.addEventListener('click', function(event) {
+      event.stopPropagation();
+      element.classList.toggle('is-active');
+    })
+  };
+
+  dropdownElements.forEach(eventHandler);
+</script>
