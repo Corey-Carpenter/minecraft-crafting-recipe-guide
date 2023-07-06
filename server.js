@@ -1,6 +1,7 @@
 const path = require('path');
 const express = require('express');
 const exphbs = require('express-handlebars');
+const session = require('express-session');
 const routes = require('./controllers/index.js');
 const helpers = require('./utils/helpers');
 const sequelize = require('./config/connection');
@@ -11,13 +12,27 @@ const CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
 const client = new OAuth2Client(CLIENT_ID);
 
 
-
 const app = express();
 const PORT = process.env.PORT || 8080;
 
 
 // Create the Handlebars.js engine object with custom helper functions
 const hbs = exphbs.create({ helpers });
+
+// Create a new sequelize store using the express-session package
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
+
+// Configure and link a session object with the sequelize store
+const sess = {
+  secret: 'Super secret secret',
+  cookie: {},
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize
+  })
+};
+
 
 // Conditional operators for handlebars
 hbs.handlebars.registerHelper('ifCond', function (v1, operator, v2, options) {
@@ -48,6 +63,8 @@ hbs.handlebars.registerHelper('ifCond', function (v1, operator, v2, options) {
 });
 
 // Inform Express.js which template engine we're using
+app.use(session(sess));
+
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 

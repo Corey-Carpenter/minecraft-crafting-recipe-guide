@@ -3,23 +3,9 @@ const router = express.Router();
 const cloudinary = require('cloudinary').v2;
 const CraftingRecipe = require('../../models/craftingRecipe');
 const Comment = require('../../models/Comment');
+const withAuth = require('../../utils/auth');
 
-/*
-async function getComments(req, res) {
-  const commentData = await Comment.findAll().catch((err) => {
-    res.json(err);
-  });
-  allComments = commentData.map((comment) => comment.get({ plain: true }));
-  console.log(allComments);
-};
-
-let allComments = [];
-getComments();
-*/
-
-
-// GET route to retrieve images from Cloudinary
-router.get('/:id', async(req, res) => {
+router.get('/:id', withAuth, async(req, res) => {
   // findOne method
   const commentData = await Comment.findAll({
     where: {

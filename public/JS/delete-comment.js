@@ -4,7 +4,7 @@ async function deleteHandler(event) {
     while(!deleteButton.getAttribute("id")) {
       deleteButton = deleteButton.parentElement;
     }
-    const commentId = deleteButton.id;
+    const commentId = deleteButton.value;
     const response = await fetch(`/api/comments/${commentId}`, {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json'}
@@ -17,7 +17,7 @@ async function deleteHandler(event) {
     }
 };
 
-var deleteButtons = document.querySelectorAll('.button');
+var deleteButtons = document.querySelectorAll('#delete-button');
 
 function eventHandler(button) {
       button.addEventListener('click', deleteHandler);

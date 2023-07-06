@@ -21,7 +21,7 @@
               <small>IMAGE-ID: {{comment.image_id}}</small>
               <small>{{comment.createdAt}}</small>
             </p>
-            <button id={{comment.id}} class="button is-primary" type='submit'>
+            <button value={{comment.id}} id="delete-button" class="button is-primary" type='submit'>
               Delete
               <div class="navbar-item">
               <img src="../images/creeper-face.png">
@@ -34,23 +34,3 @@
 
 
 <script src='../js/delete-comment.js'></script>
-
-<!--
-<article class="card">
-        <div class="card-content">
-          <div class="card-content">
-            <p>
-              <strong>Previous Comment</strong>
-              <br>
-              {{individualComment.text}}
-              <br>
-              <small class="comment-id" data-comment-id={{individualComment.id}}>ID: {{individualComment.id}}</small>
-              <small>{{individualComment.createdAt}}</small>
-            </p>
-            <button class="button is-primary" type='submit'>
-              Delete
-            </button>
-          </div>
-        </div>
-</article>
--->

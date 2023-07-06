@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const bcrypt = require('bcrypt');
 const User = require('../../models/bcryptUser');
+const session = require('express-session');
 
 // CREATE a new user
 
@@ -31,7 +32,7 @@ router.post('/login', async (req, res) => {
         where: { 
             username: req.body.username 
         } 
-    });
+      });
       if (!userData) {
         res.status(404).json({ message: 'Login failed. Please try again!' });
         return;
@@ -46,11 +47,25 @@ router.post('/login', async (req, res) => {
         res.status(400).json({ message: 'Login failed. Please try again!' });
         return;
       }
-      // if they do match, return success message
-      res.status(200).json({ message: 'You are now logged in!' });
+      req.session.save(() => {
+        req.session.user_id = userData.id;
+        req.session.logged_in = true;
+        req.session.username = userData.username;
+        res.json({ user: userData, message: 'You are now logged in!' });
+      });
     } catch (err) {
       res.status(500).json(err);
     }
+});
+
+router.post('/logout', (req, res) => {
+  if (req.session.logged_in === true) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
+  }
 });
 
 module.exports = router;
