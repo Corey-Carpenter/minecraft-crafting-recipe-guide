@@ -55,6 +55,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/', require('./controllers/api/loginRoutes'));
 
 // Display the image of the item that the user chooses
 app.post('api/crafting-recipes/search', (req,res) => {
