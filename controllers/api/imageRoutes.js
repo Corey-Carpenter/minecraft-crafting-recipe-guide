@@ -3,7 +3,7 @@ const router = express.Router();
 const cloudinary = require('cloudinary').v2;
 
 // GET route to retrieve images from Cloudinary
-router.get('/', async (req, res) => {
+router.get('/api/crafting-recipes/search', async (req, res) => {
   try {
     cloudinary.config({
       cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
