@@ -1,7 +1,7 @@
 <article class="card">
         <div class="card-content">
           {{#each allComments as |comment|}}
-          <div class="card-content" data-comment-id="{{comment.id}}">
+          <div class="card-content">
             <p>
               <strong>FIRSTNAME LASTNAME</strong>
               <br>
@@ -11,7 +11,7 @@
               <small>IMAGE-ID: {{comment.image_id}}</small>
               <small>{{comment.createdAt}}</small>
             </p>
-            <button class="button is-primary" type='submit'>
+            <button id={{comment.id}} class="button is-primary" type='submit'>
               Delete
               <div class="navbar-item">
               <img src="../images/creeper-face.png">

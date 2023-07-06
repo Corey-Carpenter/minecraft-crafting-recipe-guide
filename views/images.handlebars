@@ -33,19 +33,20 @@
         </button>
       </form>
     </section>
-    {{#each allComments as |comment|}}
+   <!-- {{#each allComments as |comment|}}
+      {{#ifCond comment.image_id '===' individualRecipe.id}}
     <div class="card-content">
       <h3><strong>FIRSTNAME LASTNAME</strong></h3>
-        <!--{{#ifCond comment.image_id '===' individualRecipe.id}}-->
       <p class="card-content">
       {{comment.text}}
       <br>
       <small>{{comment.createdAt}}</small>
       <small>{{comment.image_id}}</small>
       </p>
-        <!--{{/ifCond}}-->
+        
     </div>
-    {{/each}}
+      {{/ifCond}}
+    {{/each}} -->
   </div>
 </div>
 <!-- This is the script for adding a new comment -->
