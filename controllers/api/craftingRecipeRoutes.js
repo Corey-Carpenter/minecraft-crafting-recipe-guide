@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const CraftingRecipe = require('../../models/craftingRecipe');
 
-
+/*
 // GET route to display the drop down menu of the items
 router.get('/search', (req, res) => {
   res.render('homepage');
@@ -29,5 +29,6 @@ router.post('/search', async (req, res) => {
     res.status(500).json({ error: 'Failed to search for recipe' });
   }
 });
+*/
 
 module.exports = router;

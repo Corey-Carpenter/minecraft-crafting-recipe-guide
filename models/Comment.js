@@ -10,16 +10,23 @@ Comment.init({
         allowNull: false,
         primaryKey: true,
         autoIncrement: true,
+        onDelete: 'CASCADE'
     },
     text: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-            len: { 
-               args: [1],
-               msg: "Comment cannot be blank."
-            }
-         }
+            len: [1]
+        }
+    },
+    image_id: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        
+        references: {
+            model: 'craftingrecipe',
+            key: 'id'
+        }
     }
 },
 {
@@ -46,15 +53,13 @@ user_id: {
         }
     },
 
-image_id: {
-        type: DataTypes.INTEGER,
-        allowNull: true,
-        
-        references: {
-            // this did the trick!
-            onDelete: 'set null',
-            model: 'craftingRecipe',
-            key: 'id'
-        }
-    }
+
+
+
+validate: {
+            len: { 
+               args: [1],
+               msg: "Comment cannot be blank."
+            }
+         }
 */
