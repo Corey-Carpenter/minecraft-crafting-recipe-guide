@@ -1,15 +1,16 @@
 async function newFormHandler(event) {
     event.preventDefault();
     const new_comment = document.querySelector('#new_comment').value;
+    const imageId = parseInt(event.target.parentElement.getAttribute("data-image-id"));
     //const recipe_image = event.target.closest('img');
     //const image_id = recipe_image.getAttribute('id');
-    //console.log(image_id);
+    console.log(imageId);
     // Send fetch request to add a new comment
     const response = await fetch(`/api/comments`, {
       method: 'POST',
       body: JSON.stringify({
-        text: new_comment
-        //image_id: image_id
+        text: new_comment,
+        image_id: imageId
       }),
       headers: {
         'Content-Type': 'application/json',

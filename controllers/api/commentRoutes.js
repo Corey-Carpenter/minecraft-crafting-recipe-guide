@@ -23,13 +23,11 @@ router.get('/:id', async(req, res) => {
 
 // route to create/add a comment using async/await
 router.post('/', async (req, res) => {
-  try { 
-    const commentData = await Comment.create({
-    text: req.body.text
-    //image_id: req.body.image_id
-    });
+  try {
+    const commentData = await Comment.create(req.body);
     res.status(200).json(commentData)
   } catch (err) {
+    console.log(err);
     res.status(400).json(err);
   }
 });
@@ -56,41 +54,3 @@ router.delete('/:id', async (req, res) => {
 
 
 module.exports = router;
-
-/*
-// DELETE a comment
-router.delete('/:id', async (req, res) => {
-    try {
-      const commentData = await Comment.destroy({
-        where: {
-          id: req.params.id
-        },
-      });
-  
-      if (!commentData) {
-        res.status(404).json({ message: 'No comment found with that id!' });
-        return;
-      }
-  
-      res.status(200).json(commentData);
-    } catch (err) {
-      res.status(500).json(err);
-    }
-});
-
-// route to create/add a comment using async/await
-router.post('/', async (req, res) => {
-  try { 
-    const commentData = await Comment.create({
-    text: req.body.text,
-    image_id: req.body.image_id
-    });
-    res.status(200).json(commentData)
-    console.log(commentData);
-  } catch (err) {
-    res.status(400).json(err);
-  }
-});
-
-module.exports = router;
-*/
