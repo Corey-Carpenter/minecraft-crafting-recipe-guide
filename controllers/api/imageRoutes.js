@@ -15,6 +15,8 @@ async function getComments(req, res) {
 let allComments = [];
 getComments();
 
+
+// GET route to retrieve images from Cloudinary
 router.get('/:id', async(req, res) => {
   // findOne method
   const recipeData = await CraftingRecipe.findOne({
