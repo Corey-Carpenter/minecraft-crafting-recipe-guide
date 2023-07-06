@@ -7,6 +7,7 @@ const withAuth = require('../../utils/auth');
 
 router.get('/:id', withAuth, async(req, res) => {
   // findOne method
+  const username = req.session.username;
   const commentData = await Comment.findAll({
     where: {
         image_id: req.params.id
@@ -27,7 +28,7 @@ router.get('/:id', withAuth, async(req, res) => {
     matchingComments = commentData.map((comment) => comment.get({ plain: true }));
   }
   const individualRecipe = recipeData.get({ plain: true });
-  res.render('images', { matchingComments, individualRecipe });
+  res.render('images', { matchingComments, individualRecipe, username });
 });
 
 module.exports = router;

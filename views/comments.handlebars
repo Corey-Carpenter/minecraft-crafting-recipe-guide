@@ -13,12 +13,9 @@
           {{#each allComments as |comment|}}
           <div class="card-content">
             <p>
-              <strong>FIRSTNAME LASTNAME</strong>
-              <br>
-              {{comment.text}}
-              <br>
-              <small>ID: {{comment.id}}</small>
-              <small>IMAGE-ID: {{comment.image_id}}</small>
+              <strong>{{comment.text}}</strong><br>
+              <small>ID: {{comment.id}}</small><br>
+              <small>IMAGE-ID: {{comment.image_id}}</small><br>
               <small>{{comment.createdAt}}</small>
             </p>
             <button value={{comment.id}} id="delete-button" class="button is-primary" type='submit'>
