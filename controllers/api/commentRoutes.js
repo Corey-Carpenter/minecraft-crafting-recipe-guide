@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const Comment = require('../../models/Comment');
+const withAuth = require('../../utils/auth');
 
 //get all comments
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   const commentData = await Comment.findAll();
   const allComments = commentData.map((comment) => comment.get({ plain: true }));
   res.render('comments', { allComments });
