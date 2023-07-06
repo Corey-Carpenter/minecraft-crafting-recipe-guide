@@ -3,6 +3,8 @@ const router = express.Router();
 const cloudinary = require('cloudinary').v2;
 const CraftingRecipe = require('../../models/craftingRecipe');
 
+
+// GET route to retrieve images from Cloudinary
 router.get('/:id', async(req, res) => {
   // findOne method
   const recipeData = await CraftingRecipe.findOne({

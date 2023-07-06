@@ -29,7 +29,7 @@ const saveUserSelection = async (req, res, next) => {
     }
   };
 
-router.post('/search', saveUserSelection, (req, res) => {
+router.post('/api/crafting-recipes/search', saveUserSelection, (req, res) => {
     // Access the imageURL from the previous middleware
     const imageURL = req.imageURL;
   
