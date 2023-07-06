@@ -35,15 +35,11 @@
     <div class="card-content">
       {{#each matchingComments as |comment|}}
       {{#ifCond comment.text.length '>' 0}}
-      <p>
-        <strong>FIRSTNAME LASTNAME</strong>
-        <p class="card-content">
-        {{comment.text}}
-        <br>
+      <p class="card-content">
+        <strong>{{comment.text}}</strong><br>
         <small>ID: {{comment.id}}</small>
         <small>IMAGE-ID: {{comment.image_id}}</small>
         <small>{{comment.createdAt}}</small>
-        </p>
       </p>
       {{/ifCond}}
       {{/each}}

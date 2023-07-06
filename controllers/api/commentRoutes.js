@@ -4,7 +4,11 @@ const withAuth = require('../../utils/auth');
 
 //get all comments
 router.get('/', withAuth, async (req, res) => {
-  const commentData = await Comment.findAll();
+  const commentData = await Comment.findAll({
+    order: [
+      ['createdAt', 'DESC']
+  ],
+  });
   const allComments = commentData.map((comment) => comment.get({ plain: true }));
   res.render('comments', { allComments });
 });
