@@ -1,4 +1,3 @@
-<!-- views/images.handlebars -->
 <div class="card">
   <div class="card-content">
     <div class="media">
@@ -33,21 +32,23 @@
         </button>
       </form>
     </section>
-   <!-- {{#each allComments as |comment|}}
-      {{#ifCond comment.image_id '===' individualRecipe.id}}
     <div class="card-content">
-      <h3><strong>FIRSTNAME LASTNAME</strong></h3>
-      <p class="card-content">
-      {{comment.text}}
-      <br>
-      <small>{{comment.createdAt}}</small>
-      <small>{{comment.image_id}}</small>
+      {{#each matchingComments as |comment|}}
+      {{#ifCond comment.text.length '>' 0}}
+      <p>
+        <strong>FIRSTNAME LASTNAME</strong>
+        <p class="card-content">
+        {{comment.text}}
+        <br>
+        <small>ID: {{comment.id}}</small>
+        <small>IMAGE-ID: {{comment.image_id}}</small>
+        <small>{{comment.createdAt}}</small>
+        </p>
       </p>
-        
-    </div>
       {{/ifCond}}
-    {{/each}} -->
+      {{/each}}
+    </div>
   </div>
 </div>
 <!-- This is the script for adding a new comment -->
-<script src='../../JS/add-comment.js'></script>
+<script src='../../js/add-comment.js'></script>
