@@ -56,6 +56,10 @@ app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', require('./controllers/api/loginRoutes'));
+app.use((req, res, next) => {
+  res.setHeader('Cross-Origin-Opener-Policy', 'same-origin-allow-popups');
+  next();
+});
 
 // Display the image of the item that the user chooses
 app.post('api/crafting-recipes/search', (req,res) => {
