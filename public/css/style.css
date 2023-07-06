@@ -14,3 +14,9 @@
         height: 200%;
         
 }
+
+#centre{
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
