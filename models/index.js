@@ -2,7 +2,7 @@ const User = require('./user.js');
 const CraftingRecipe = require('./craftingRecipe.js');
 const Comment = require('./Comment.js');
 
-
+/*
 //User has many crafting recipes
 User.hasMany(CraftingRecipe, {
     foreignKey: 'user_id',
@@ -27,15 +27,16 @@ Comment.belongsTo(User, {
 CraftingRecipe.hasMany(Comment, {
     foreignKey: 'image_id',
     allowNull: true,
-    onDelete: 'cascade'
+    onDelete: 'CASCADE'
 });
 
 //Comments belong to one crafting recipe image
 Comment.belongsTo(CraftingRecipe, {
     foreignKey: 'image_id',
     allowNull: true, 
-    onDelete: 'cascade'
+    onDelete: 'CASCADE'
 });
+*/
 
 
 module.exports = { User, CraftingRecipe, Comment };

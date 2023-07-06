@@ -1,33 +1,50 @@
 <!-- views/images.handlebars -->
 <div class="card">
-        <div class="card-image">
-          <figure class="image img">
-            <img src="https://res.cloudinary.com/ddnwvsd9o/image/upload/v1687837128/gc64wfdwvlbzjdgjzib6.gif"  alt="Crafting Recipe image">
-          </figure>
-        </div>
-        <div class="card-content">
-          <div class="media">
-            <div class="media-content">
-              <p class="title is-4">RECIPE TITLE</p>
-            </div>
-          </div>
-        </div>
+  <div class="card-content">
+    <div class="media">
+      <div class="media-content">
+        <p class="title is-3">{{individualRecipe.keyword}}</p>
       </div>
-      <article class="media">
-        <div class="media-content">
-          <div class="content">
-            <p>
-              <strong>FIRSTNAME LASTNAME</strong>
-              <br>
-              This is a comment written by firstname lastname.
-              <br>
-              <small>time</small>
-            </p>
-          </div>
-        </div>
+    </div>
+  </div>
+  <div class="card-content">
+    <div class="card-image">
+      <figure class="image img">
+        <img id={{individualRecipe.id}} src="{{individualRecipe.imageUrl}}"
+          alt="Crafting Recipe image">
+      </figure>
+    </div>
+  </div>
 </div>
-<!-- This is the form for adding a new comment -->
-<script src='/js/add-comment.js'></script>
+
+<div class="card">
+  <div class="card-content">
+    <div class="media">
+      <div class="media-content">
+        <p class="title is-4">Comments</p>
+      </div>
+    </div>
+    <section class='add-comment-container, card-content'>
+      <form id='new-comment-form'>
+        <textarea class="input" id='new_comment' name='new_comment' placeholder="Enter comment here!"></textarea>
+        <br>
+        <button class="button is-primary" type='submit'>
+          Submit
+        </button>
+      </form>
+    </section>
+    <div class="card-content">
+      <h3><strong>FIRSTNAME LASTNAME</strong></h3>
+      <p class="card-content">
+      This is a comment written by firstname lastname.
+      <br>
+      <small><i>time</i></small>
+      </p>
+    </div>
+  </div>
+</div>
+<!-- This is the script for adding a new comment -->
+<script src='../../JS/add-comment.js'></script>
 
 <!--
 <div>

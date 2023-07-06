@@ -1,15 +1,45 @@
-<article class="media">
-        <div class="media-content">
+<article class="card">
+        <div class="card-content">
           {{#each allComments as |comment|}}
-          <div class="content">
+          <div class="card-content" data-comment-id="{{comment.id}}">
             <p>
-              <strong>{{User.first_name}}  {{User.last_name}}</strong>
+              <strong>FIRSTNAME LASTNAME</strong>
               <br>
               {{comment.text}}
               <br>
-              <small>ID: {{comment.id}} {{comment.createdAt}}</small>
+              <small>ID: {{comment.id}}</small>
+              <small>{{comment.createdAt}}</small>
             </p>
+            <button class="button is-primary" type='submit'>
+              Delete
+              <div class="navbar-item">
+              <img src="../images/creeper-face.png">
+              </div>
+            </button>
           </div>
           {{/each}}
         </div>
 </article>
+
+
+<script src='../JS/delete-comment.js'></script>
+
+<!--
+<article class="card">
+        <div class="card-content">
+          <div class="card-content">
+            <p>
+              <strong>Previous Comment</strong>
+              <br>
+              {{individualComment.text}}
+              <br>
+              <small class="comment-id" data-comment-id={{individualComment.id}}>ID: {{individualComment.id}}</small>
+              <small>{{individualComment.createdAt}}</small>
+            </p>
+            <button class="button is-primary" type='submit'>
+              Delete
+            </button>
+          </div>
+        </div>
+</article>
+-->
