@@ -1,5 +1,15 @@
 <article class="card">
         <div class="card-content">
+          <div class="media-content">
+          <p class="title is-3">All Comments</p>
+          </div>
+          {{#ifCond allComments.length '===' 0}}
+          <div class="card-content">
+            <p>
+              No comments yet!
+            </p>
+          </div>
+          {{/ifCond}}
           {{#each allComments as |comment|}}
           <div class="card-content">
             <p>

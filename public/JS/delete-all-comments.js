@@ -1,5 +1,5 @@
 const Comment = require('../../models/Comment');
 const sequelize = require('../../config/connection');
 
-//run node public/JS/delete-all.js to delete all comments (using while I test the feature)
+//run node public/JS/delete-all-comments.js to delete all comments
 Comment.sync({ force: true });

@@ -5,15 +5,12 @@ async function deleteHandler(event) {
       deleteButton = deleteButton.parentElement;
     }
     const commentId = deleteButton.id;
-    // Send fetch request to delete comment
     const response = await fetch(`/api/comments/${commentId}`, {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json'}
     });
-    //if the comment is deleted, the 'comments' template will be rerendered
     if (response.ok) {
       alert("Comment successfully deleted");
-      console.log(response);
       location.reload();
     } else {
       alert('Failed to delete comment');
