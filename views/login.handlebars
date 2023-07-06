@@ -10,7 +10,11 @@
 </head>
 <body>
 
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <div class="g-signin2" 
+   data-onsuccess="onSignIn"
+   data-scope="https://www.googleapis.com/auth/plus.login"
+   data-accesstype="offline"
+   data-redirecturi="https://minecraft-crafting-recipes-b8ba8c8afeec.herokuapp.com/"></div>
 
     <!--sign out section -->
     <a href="#" onclick="signOut();">Sign out</a>
