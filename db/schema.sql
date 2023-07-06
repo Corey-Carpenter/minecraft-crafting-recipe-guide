@@ -1,2 +1,11 @@
 DROP DATABASE IF EXISTS user_db;
 CREATE DATABASE user_db;
+
+USE user_db;
+
+CREATE TABLE craftingRecipe (
+  id INT NOT NULL AUTO_INCREMENT,
+  keyword VARCHAR(30) NOT NULL,
+  image_url VARCHAR(300) NOT NULL,
+  PRIMARY KEY(id)
+);
