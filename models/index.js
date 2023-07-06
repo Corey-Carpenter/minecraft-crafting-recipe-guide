@@ -39,5 +39,4 @@ Comment.belongsTo(CraftingRecipe, {
 });
 
 
-
 module.exports = { User, CraftingRecipe, Comment };

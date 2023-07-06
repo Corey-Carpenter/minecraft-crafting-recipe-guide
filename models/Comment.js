@@ -52,14 +52,4 @@ user_id: {
             key: 'id'
         }
     },
-
-
-
-
-validate: {
-            len: { 
-               args: [1],
-               msg: "Comment cannot be blank."
-            }
-         }
 */

@@ -1,7 +1,10 @@
 async function deleteHandler(event) {
-    const deleteButton = event.target;
-    const commentId = deleteButton.parentElement.getAttribute('data-comment-id');
-    event.stopPropagation();
+    event.preventDefault();
+    let deleteButton = event.target;
+    while(!deleteButton.getAttribute("id")) {
+      deleteButton = deleteButton.parentElement;
+    }
+    const commentId = deleteButton.id;
     // Send fetch request to delete comment
     const response = await fetch(`/api/comments/${commentId}`, {
       method: 'DELETE',
@@ -11,16 +14,16 @@ async function deleteHandler(event) {
     if (response.ok) {
       alert("Comment successfully deleted");
       console.log(response);
-      document.location.replace('/api/comments');
+      location.reload();
     } else {
       alert('Failed to delete comment');
     }
 };
 
-var deleteElements = document.querySelectorAll('.button');
+var deleteButtons = document.querySelectorAll('.button');
 
-function eventHandler(element) {
-      element.addEventListener('click', deleteHandler);
+function eventHandler(button) {
+      button.addEventListener('click', deleteHandler);
   };
 
-deleteElements.forEach(eventHandler);
+deleteButtons.forEach(eventHandler);

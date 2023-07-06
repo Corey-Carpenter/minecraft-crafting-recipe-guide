@@ -4,7 +4,7 @@ const Comment = require('../../models/Comment');
 //get all comments
 router.get('/', async (req, res) => {
   const commentData = await Comment.findAll();
-  allComments = commentData.map((comment) => comment.get({ plain: true }));
+  const allComments = commentData.map((comment) => comment.get({ plain: true }));
   res.render('comments', { allComments });
 });
 
