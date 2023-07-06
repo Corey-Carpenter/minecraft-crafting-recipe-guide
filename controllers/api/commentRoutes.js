@@ -15,7 +15,7 @@ router.get('/:id', async(req, res) => {
       where: {
           id: req.params.id
       },
-      attributes: ['id', 'text', 'createdAt']
+      attributes: ['id', 'text', 'image_id', 'createdAt']
   })
   const individualComment = commentData.get({ plain: true });
   res.render('comments', { individualComment });
@@ -27,7 +27,6 @@ router.post('/', async (req, res) => {
     const commentData = await Comment.create(req.body);
     res.status(200).json(commentData)
   } catch (err) {
-    console.log(err);
     res.status(400).json(err);
   }
 });

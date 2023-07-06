@@ -19,7 +19,7 @@ async function newFormHandler(event) {
     //if the comment is added, the 'images' template will be rerendered
     if (response.ok) {
       alert("Comment successfully created");
-      document.location.replace('/api/comments');
+      location.reload();
     } else {
       alert('Failed to add comment');
     }
