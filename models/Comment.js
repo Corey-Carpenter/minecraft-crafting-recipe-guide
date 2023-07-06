@@ -18,6 +18,15 @@ Comment.init({
         validate: {
             len: [1]
         }
+    },
+    image_id: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        
+        references: {
+            model: 'craftingrecipe',
+            key: 'id'
+        }
     }
 },
 {
@@ -44,16 +53,7 @@ user_id: {
         }
     },
 
-image_id: {
-        type: DataTypes.INTEGER,
-        allowNull: true,
-        
-        references: {
-            onDelete: 'SET NULL',
-            model: 'craftingRecipe',
-            key: 'id'
-        }
-    }
+
 
 
 validate: {

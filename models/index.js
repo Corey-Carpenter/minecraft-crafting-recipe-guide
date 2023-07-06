@@ -22,6 +22,7 @@ User.hasMany(Comment, {
 Comment.belongsTo(User, {
     foreignKey: 'user_id',
 });
+*/
 
 //Crafting recipe images have many comments
 CraftingRecipe.hasMany(Comment, {
@@ -36,7 +37,7 @@ Comment.belongsTo(CraftingRecipe, {
     allowNull: true, 
     onDelete: 'CASCADE'
 });
-*/
+
 
 
 module.exports = { User, CraftingRecipe, Comment };
