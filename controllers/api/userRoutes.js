@@ -6,7 +6,7 @@ const session = require('express-session');
 // CREATE a new user
 
 router.get('/signup', async (req, res) => {
-    res.render('bcryptsignin');
+    res.render('bcryptsignup');
 });
 
 router.get('/login', async (req, res) => {
